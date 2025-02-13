@@ -11,7 +11,7 @@
         function redirectToMain() {
             // テキストボックスの値を取得
             const input1 = document.getElementById('username').value;
-            const input2 = document.getElementById('passward').value;
+            const input2 = document.getElementById('password').value;
 
             // 入力値をチェック
             if (input1 === 'Guest' && input2 === '8776') {
@@ -26,7 +26,7 @@
     <div class="contentarea">
         <div class="cursor"></div>
     <input type="text" id="username" placeholder="ユーザー名"><br><br>
-    <input type="passward" id="passward" placeholder="パスワード"><br><br>
+    <input type="password" id="password" placeholder="パスワード"><br><br>
     
     <button onclick="redirectToMain()">ログイン</button>
 
