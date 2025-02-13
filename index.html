@@ -7,12 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="script.js"></script>
+    <script src="script.js">
+        function redirectToMain() {
+            // テキストボックスの値を取得
+            const input1 = document.getElementById('username').value;
+            const input2 = document.getElementById('passward').value;
+
+            // 入力値をチェック
+            if (input1 === 'Guest' && input2 === '8776') {
+                window.location.href = 'main.html';
+            } else {
+                document.write('ユーザー名またはパスワードが間違っています。');
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="contentarea">
         <div class="cursor"></div>
-        <h2>Home Page</h2><br><a href="https://geniuspcboy.github.io/Programming/">プログラミングの解説・回答サイトへ行く</a><br>
+    <input type="text" id="username" placeholder="ユーザー名"><br><br>
+    <input type="passward" id="passward" placeholder="パスワード"><br><br>
+    
+    <button onclick="redirectToMain()">Go!</button>
+
+        
     </div>
 </body>
 </html>
